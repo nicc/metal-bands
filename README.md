@@ -8,7 +8,7 @@ Also lets not pretend I did any real work for this. The model is an unaltered us
 
 ### Setup
 * clone this repo and cd into the root folder
-* instal python3 and pip3 (I had issues with an older version of python3 so make sure you're up to date. version 3.7.6 worked for me)
+* install python3 and pip3 (I had issues with an older version of python3 so make sure you're up to date. version 3.7.6 worked for me)
 * install tensorflow with `pip3 install tensorflow`
 * install textgenrnn with `pip3 install textgenrnn`
 * run the "app" with `python3 doit.py`
