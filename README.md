@@ -2,8 +2,9 @@
 For AT and RP with <3.
 
 Uses a recurrent neural network on TensorFlow. The data is from a sparql query to dbpedia.
+It does band names, band anstracts, album names and album abstracts. The Python code is very naive; this is just for fun.
 
-Lets not pretend I did any real work for this. The model is an unaltered use of https://github.com/minimaxir/textgenrnn
+Also lets not pretend I did any real work for this. The model is an unaltered use of https://github.com/minimaxir/textgenrnn
 
 ### Setup
 * clone this repo and cd into the root folder
@@ -16,7 +17,7 @@ Lets not pretend I did any real work for this. The model is an unaltered use of 
 A pre-trained model is included. Check the code in `doit.py` for commented-out code that would retrain it if you want to use new data.
 
 ### Dataset
-The following sparql query was executed against [the public dbpedia mirror](http://dbpedia.org/sparql):
+Data was derived from [the public dbpedia mirror](http://dbpedia.org/sparql). See `queries` folder. Example SPARQL query:
 
 ```
 SELECT DISTINCT ?band, STR(?label) AS ?name WHERE
@@ -33,7 +34,7 @@ SELECT DISTINCT ?band, STR(?label) AS ?name WHERE
 It was then cleaned to exlcude things like "(American band)".
 
 ### Sample results
-Generated with temperatures of `1.0` and `0.75`.
+Band names generated with temperatures of `1.0` and `0.75`.
 
 ```
 Bools

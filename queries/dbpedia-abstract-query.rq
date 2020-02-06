@@ -1,0 +1,8 @@
+SELECT DISTINCT ?band, STR(?label) AS ?name WHERE
+{
+  ?band a <http://schema.org/MusicGroup> ;
+        dbo:abstract ?label ;
+        <http://dbpedia.org/ontology/genre> <http://dbpedia.org/resource/Black_metal>
+  MINUS { ?band a <http://schema.org/Person> }
+  FILTER(langMatches(lang(?label),"EN"))
+}
